@@ -1,0 +1,99 @@
+{
+	"common": {
+		"name": "bewaesserung",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Bewässerung",
+		"titleLang": {
+			"en": "Bewässerung",
+			"de": "Bewässerung",
+			"ru": "Bewässerung",
+			"pt": "Bewässerung",
+			"nl": "Bewässerung",
+			"fr": "Bewässerung",
+			"it": "Bewässerung",
+			"es": "Bewässerung",
+			"pl": "Bewässerung",
+			"zh-cn": "保证"
+		},
+		"desc": {
+			"en": "Control your irrigation system with the ioBroker",
+			"de": "Steuern Sie Ihr Bewässerungssystem mit dem ioBroker",
+			"ru": "Управляйте своей системой орошения с помощью ioBroker",
+			"pt": "Controle seu sistema de irrigação com o ioBroker",
+			"nl": "Bedien uw irrigatiesysteem met de ioBroker",
+			"fr": "Contrôlez votre système d'irrigation avec l'ioBroker",
+			"it": "Controlla il tuo sistema di irrigazione con ioBroker",
+			"es": "Controle su sistema de riego con el ioBroker",
+			"pl": "Kontroluj swój system nawadniania za pomocą ioBroker",
+			"zh-cn": "使用 ioBroker 控制您的灌溉系统"
+		},
+		"authors": [
+			"Torsten Enkelmann <t.enkelmann@web.de>"
+		],
+		"keywords": [
+			"Garden",
+			"Irrigation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "bewaesserung.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/tenkelmann/ioBroker.bewaesserung/main/admin/bewaesserung.png",
+		"readme": "https://github.com/tenkelmann/ioBroker.bewaesserung/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "garden",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"cli": true,
+	"target": "directory",
+	"adapterName": "bewaesserung",
+	"title": "Bewässerung",
+	"description": "Control your irrigation system with the ioBroker",
+	"keywords": [
+		"Garden",
+		"Irrigation"
+	],
+	"expert": "yes",
+	"features": [
+		"adapter"
+	],
+	"adminFeatures": [],
+	"type": "garden",
+	"startMode": "daemon",
+	"connectionType": "local",
+	"dataSource": "poll",
+	"connectionIndicator": "yes",
+	"language": "JavaScript",
+	"adminReact": "no",
+	"tools": [
+		"ESLint",
+		"type checking"
+	],
+	"i18n": "words.js",
+	"releaseScript": "yes",
+	"devServer": "yes",
+	"devServerPort": 8081,
+	"indentation": "Tab",
+	"quotes": "double",
+	"es6class": "yes",
+	"authorName": "Torsten Enkelmann",
+	"authorGithub": "tenkelmann",
+	"authorEmail": "t.enkelmann@web.de",
+	"gitRemoteProtocol": "SSH",
+	"gitCommit": "no",
+	"defaultBranch": "main",
+	"license": "MIT License",
+	"dependabot": "yes",
+	"creatorVersion": "2.1.1"
+}
