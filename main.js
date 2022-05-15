@@ -41,6 +41,7 @@ class Bewaesserung extends utils.Adapter {
 		// this.config:
 		this.log.info("config option1: " + this.config.option1);
 		this.log.info("config option2: " + this.config.option2);
+		this.log.info("config option3: " + this.config.option3);
 
 		/*
 		For every state in the system there has to be also an object of type state
@@ -59,8 +60,21 @@ class Bewaesserung extends utils.Adapter {
 			native: {},
 		});
 
+		await this.setObjectNotExistsAsync("testVariable2", {
+			type: "state",
+			common: {
+				name: "testVariable2",
+				type: "number",
+				role: "value",
+				read: true,
+				write: true,
+			},
+			native: {},
+		});
+
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		this.subscribeStates("testVariable");
+		this.subscribeStates("testVariable2");
 		// You can also add a subscription for multiple states. The following line watches all states starting with "lights."
 		// this.subscribeStates("lights.*");
 		// Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
