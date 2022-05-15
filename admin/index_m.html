@@ -92,6 +92,164 @@
 					<li class="tab col s6 l2 tab-notification"><a href="#tab-notification" class="translate">Notifications</a></li>
 				</ul>
 			</div>
+			<div class="row" id="mainSettings">
+				<div id="tab-settings" class="col s12 page">
+					<div class="row">
+						<div class="col s12">
+							<h6 class="translate sub-title">Irrigation Control</h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s2 m1 l1 left">
+							<a  id="responseOIDDialog" class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+						</div>
+					</div>
+					<div class="table-values-div">
+						<table class="table-values">
+							<thead>
+								<tr>
+									<th data-name="_index" id="events_col_0" style="background:#174475;width:80px;text-align:center;" data-style="text-align:center;">Nr</th>
+									<th data-name="enabled" id="events_col_1" style="width:70px;background:#174475;" data-style="width:70px;" data-type="checkbox" class="translate">active</th>
+									<th data-name="sprinkleName" id="events_col_2" style="width:40%;background:#174475;" data-type="text" class="translate">Name</th>
+									<th data-name="name" id="events_col_3" style="width:40%;background:#174475;" data-type="text" class="translate">Object-ID sprinkler</th>
+									<th data-name="edit2" id="events_col_4" style="width:150px;background:#174475;" data-style="width:150px;text-align:left"></th>
+									<!-- ********************************  ***  only for temp states  ***  ************************ -->
+									<th data-name="triggerID" id="events_col_5" style="width:0;background:#174475;" class="translate" data-type="text"></th>
+									<th data-name="wateringTime" id="events_col_6" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="wateringAdd" id="events_col_7" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="wateringInterval" id="events_col_8" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="maxSoilMoistureIrrigation" id="events_col_9" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="maxSoilMoistureRain" id="events_col_10" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="triggersIrrigation" id="events_col_11" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="pipeFlow" id="events_col_12" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="booster" id="events_col_13" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="endIrrigation" id="events_col_14" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="methodControlSM" id="events_col_15" style="width:0;" class="translate" data-type="text"></th>
+									<th data-name="inGreenhouse" id="events_col_16" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="triggerSM" id="events_col_17" style="width:0;" class="translate" data-type="text"></th>
+									<th data-name="analogZPct" id="events_col_18" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="analogOHPct" id="events_col_19" style="width:0;" class="translate" data-type="number"></th>
+									<th data-name="startDelay" id="events_col_20" style="width:0;" class="translate" data-type="text"></th>
+									<th data-name="sun" id="events_col_21" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="mon" id="events_col_22" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="tue" id="events_col_23" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="wed" id="events_col_24" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="thur" id="events_col_25" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="fri" id="events_col_26" style="width:0;" class="translate" data-type="checkbox"></th>
+									<th data-name="sat" id="events_col_27" style="width:0;" class="translate" data-type="checkbox"></th>
+									<!-- ********************************  ***  ********************  ***  ************************ -->
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<div class="col s12 page" id="tab-pump">
+					<div class="row">
+						<div class="col s12">
+							<h6 class="translate sub-title">Settings for Valve</h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s10 m5 l1 input-field">
+							<input type="text" class="value" id="triggerControlVoltage" />
+							<label for="triggerControlVoltage" class="translate"></label>
+							<span class="translate">Control voltage of the valves</span>
+						</div>
+						<div class="col s2 m1 l1">
+							<a id="triggerControlVoltageDialogPopUp" class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+						</div>
+						<div class="col s12 m6 l2 input-field">
+							<input type="number" class="value" id="maximumParallelValves" min=1 max=5 placeholder="1-5" step="1" />
+							<label for="maximumParallelValves" class="translate"></label>
+							<span class="translate">Maximum parallel operation of the valves</span>
+						</div>
+						<div class="col s12 m6 l2 input-field">
+							<input type="number" class="value" id="switchingDistance" min=100 max=1000 placeholder="100-1000" step="100" value="300" />
+							<label for="switchingDistance" class="translate"></label>
+							<span class="translate">Switching distance between the valves in ms</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<h6 class="translate sub-title">Settings for Pump</h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s10 m5 l5 input-field">
+							<input type="text" class="value" id="triggerMainPump" />
+							<label for="triggerMainPump" class="translate"></label>
+							<span class="translate">Main pump</span>
+						</div>
+						<div class="col s2 m1 l1">
+							<a id="triggerMainPumpDialogPopUp" class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+						</div>
+						<div class="col s12 m4 l2 input-field">
+							<input type="number" class="value" id="triggerMainPumpPower" min=500 max=5000 placeholder="500-5000" step="100" />
+							<label for="triggerMainPumpPower" class="translate"></label>
+							<span class="translate">maximum pump output of the main pump in l/h</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 input-field">
+							<input type="checkbox" class="value" id="cisternSettings" />
+							<span for="cisternSettings" class="translate">Add cistern pump as priority pump</span>
+						</div>
+					</div>
+					<div class="row col s12 cisternObjekt">
+						<div class="row">
+							<div class="input-field col s10 m5 l5">
+								<input type="text" class="value" id="triggerCisternPump" />
+								<label for="triggerCisternPump" class="translate"></label>
+								<span class="translate">cistern pump</span>
+							</div>
+							<div class="col s2 m1 l1">
+								<a id="triggerCisternPumpDialogPopUp" class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+							</div>
+							<div class="col s6 m4 l2 input-field">
+								<input type="number" class="value" id="triggerCisternPumpPower" min=500 max=5000 placeholder="500-5000" step="100" />
+								<label for="triggerCisternPumpPower" class="translate"></label>
+								<span class="translate">maximum pump capacity of the cistern in l/h</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s10 m5 l5">
+								<input type="text" class="value" id="actualValueLevel" />
+								<label for="actualValueLevel" class="translate"></label>
+								<span class="translate">Level of the cistern</span>
+							</div>
+							<div class="col s2 m1 l1">
+								<a id="actualValueLevelDialogPopUp" class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+							</div>
+							<div class="col s6 m4 l2 input-field">
+								<input type="number" class="value" id="triggerMinCisternLevel" min=0 max=100 placeholder="0-100" step="5" />
+								<label for="triggerMinCisternLevel" class="translate"></label>
+								<span class="translate">Minimum fill level of the cysts in %</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 page" id="tab-time">
+					<div class="row">
+						<div class="col s12">
+							<h6 class="translate sub-title">Settings for Time</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 page" id="tab-extra">
+					<div class="row">
+						<div class="col s12">
+							<h6 class="translate sub-title">Settings for Astro</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 page" id="tab-notification">
+					<div class="row">
+						<div class="col s12">
+							<h6 class="translate sub-title">Settings for Notification</h6>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>
