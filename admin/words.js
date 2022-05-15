@@ -2,6 +2,14 @@
 "use strict";
 
 systemDictionary = {
+	"Irrigation":	{
+		"en": "Irrigation",
+		"de": "Bew&aumlsserung"
+	},
+	"Control your Irrigation": {
+		"en": "Control your Irrigation",
+		"de": "Steuere deine Bewässerung"
+	},
 	"bewaesserung adapter settings": {
 		"en": "Adapter settings for bewaesserung",
 		"de": "Adaptereinstellungen für bewaesserung",
